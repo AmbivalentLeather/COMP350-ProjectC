@@ -1,4 +1,5 @@
 #/bin/bash
+# Nicholas Young & Chase Simao
 gcc loadFile.c -o loadFile
 nasm bootload.asm
 dd if=/dev/zero of=diskc.img bs=512 count=1000
