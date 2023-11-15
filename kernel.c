@@ -119,13 +119,14 @@ void readSector(char* address, int sector)
 
 
 void readFile(char* filename, char* output_buffer, int* sectorsRead)
-{	
+{
 	char directory_buffer[512];
 	int i = 0;
 
 	int file_entry = 0;
 	int* pfile_entry;
 	pfile_entry = &file_entry;
+	//*sectorsRead = 0;
 
 	// Reads directory (sector 2) into directory buffer
 	readSector(directory_buffer, 2);

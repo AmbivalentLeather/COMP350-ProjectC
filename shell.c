@@ -11,7 +11,7 @@ int main()
 {
 	while(1) {
 		char userInput[80];
-		char cmdString[4];
+		char cmdString[10];
 		char fileName[12];
 
 		char* cmdType = "type";
@@ -24,7 +24,6 @@ int main()
 		findCommandName(userInput, cmdString);
 		findFileName(userInput, fileName);
 
-//		/*
 		if (stringCompare(cmdString, cmdType)) {
 			type(fileName);
 		}
@@ -34,7 +33,7 @@ int main()
 		else {
 			syscall(0, "Bad command!\n\r");
 		}
-		// */
+		
 	}
 		
 }
@@ -54,7 +53,6 @@ void type(char* inputFileName)
 	}
 	// */
 
-	syscall(5);
 }
 
 void exec(char* inputFileName)
@@ -73,7 +71,6 @@ void exec(char* inputFileName)
 	}
 	// */
 
-	syscall(5);
 }
 
 void findFileName(char* inputString, char* fileName)
@@ -81,7 +78,7 @@ void findFileName(char* inputString, char* fileName)
 	int i = 0;
 	while(i < 12) {
 		fileName[i] = inputString[i + 5];
-		++i;
+		i++;
 	}
 }
 
@@ -92,7 +89,8 @@ void findCommandName(char inputString[], char* outputString)
 		outputString[i] = inputString[i];
 		i++;
 	}
-}	
+	inputString[i] = '\0';
+}
 
 int stringCompare(char given[], char* compared_to)
 {
