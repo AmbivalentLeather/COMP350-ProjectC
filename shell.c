@@ -24,6 +24,7 @@ int main()
 		findCommandName(userInput, cmdString);
 		findFileName(userInput, fileName);
 
+//		/*
 		if (stringCompare(cmdString, cmdType)) {
 			type(fileName);
 		}
@@ -33,6 +34,7 @@ int main()
 		else {
 			syscall(0, "Bad command!\n\r");
 		}
+		// */
 		
 	}
 		
@@ -70,13 +72,12 @@ void exec(char* inputFileName)
 		syscall(0, "File not found.\r\n");
 	}
 	// */
-
 }
 
 void findFileName(char* inputString, char* fileName)
 {
 	int i = 0;
-	while(i < 12) {
+	while(i < 6) {
 		fileName[i] = inputString[i + 5];
 		i++;
 	}

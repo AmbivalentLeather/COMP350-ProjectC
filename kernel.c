@@ -50,7 +50,6 @@ void printString(char* chars)
 	}
 }
 
-/*
 void printChar(char* inputChar)
 {
 	char al = inputChar[0];
@@ -58,7 +57,6 @@ void printChar(char* inputChar)
 	int ax = ah * 256 + al;
 	interrupt(0x10, ax, 0, 0, 0);
 }
-// */
 
 char* readString(char* inputArray)
 {
@@ -126,7 +124,7 @@ void readFile(char* filename, char* output_buffer, int* sectorsRead)
 	int file_entry = 0;
 	int* pfile_entry;
 	pfile_entry = &file_entry;
-	//*sectorsRead = 0;
+	*sectorsRead = 0;
 
 	// Reads directory (sector 2) into directory buffer
 	readSector(directory_buffer, 2);
