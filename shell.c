@@ -1,5 +1,6 @@
 /* Program to run the shell
  * Step 4 of Project C
+ * Nicholas Young & Chase Simao
  */
 void type(char* inputFileName);
 void exec(char* inputFileName);
