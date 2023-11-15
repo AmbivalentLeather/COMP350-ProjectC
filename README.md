@@ -2,6 +2,23 @@ Project is a bootable shell program that reads files into memory and executes pr
 
 All Steps Are Completed
 
+To verify the code
+  ./compileOS
+  java -jar simulator.jar
+
+And use the disk.img as disk c
+In the booted terminal ("C>")
+Running "exec tstpr2" should output
+  tstpr2 is working!
+Running "type messag" should output
+  "Blah blah blah"
+
+For error testing
+Running "exec tstpr3" should output
+  File not found!
+Running "type tstpr3" should output
+  File not found!
+
 https://github.com/AmbivalentLeather/COMP350-ProjectC
 
 
