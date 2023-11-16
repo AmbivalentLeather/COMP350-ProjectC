@@ -11,7 +11,7 @@ In the booted terminal ("C>")
 Running "exec tstpr2" should output
   tstpr2 is working!
 Running "type messag" should output
-  "Blah blah blah"
+	"If this message prints out, then your readSector function is working correctly"
 
 For error testing
 Running "exec tstpr3" should output
